@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+
 import random
 import time
 
@@ -7,6 +8,7 @@ def display_colors(color1, color2, ax):
     ax.fill([1, 1, 2, 2], [0, 1, 1, 0], color=color2, alpha=1)
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
+    #plt.axes([0,0,1,1], frameon = True)
     ax.axis('off')
     plt.draw()
 
@@ -16,7 +18,7 @@ def generate_random_color():
 if __name__ == '__main__':
     filename = '../data/ratings'
 
-    fig, ax = plt.subplots(figsize=(9, 6))
+    fig, ax = plt.subplots(figsize=(4, 3))
     plt.ion()
     plt.show()
 
