@@ -23,7 +23,7 @@ def symmetrize(df):
 def make_model(df):
     X = df[['r1', 'g1', 'b1', 'r2', 'g2', 'b2']]
     y = df['rating'] 
-    model = RandomForestRegressor()
+    model = RandomForestRegressor(n_estimators=1000)
     model.fit(X, y)
     return model
 
